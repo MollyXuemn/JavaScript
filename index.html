@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<br lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var v1, v2, v3;
+        v1 = 2;
+        v2 = 5;
+        v3 = v1 + v2;
+        // window.alert(v1+v2+v3);
+        document.write(Date());
+       
+        function myFunction(a,b){
+            console.log("the sum is " + v3);
+            var res = 0;
+            if(b != 0 ){
+                res = a/b;
+            }else{
+                windowm.alert("it's error");
+                console.log("Erreur!");
+            }
+            return res;
+        }
+
+        var c1 = myFunction(6,2);
+        console.log(c1);
+     /******* **************************/
+        /*******
+         * n! = 1*2*3....*n
+         * 0! = 1
+         * ********/
+        var factorielle = function(n){
+            if(n === 0){
+                return 1;
+            }
+            var res = 1;
+            /* for ( var i = 1; i <=n; i++){
+                res *= i;
+                // res = res * i;
+            } */
+            var i = 1;
+           /*  while(i < n){
+                res = res * i;
+                i++;
+            } */
+            do {
+                res = res * i;
+                i++;
+
+            }while( i <= n){
+                return res;
+            }
+            
+        }
+        var n = 5;
+        var c2 = factorielle(5);
+        console.log(n+ "! = "+c2);
+
+     /******* **************************/
+     var jours = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+     /* for(var i = 0; i < jours.length; i++){
+         console.log(i + " =>" + jours[i]);
+     } */
+     /* for(var i in jours){
+         console.log(i + " =>" + jours[i]);
+     } */
+     for(currentDay of jours){
+         console.log(currentDay + " =>" + jours[currentDay]);
+     }
+
+    /******* Object **************************/
+    //method 1:
+    var per1 = {};
+    per1.firstName = "John";
+    
+    //method 2:
+    function Personne(name){
+      this.firstName = "John",
+      this.lastName = "Doe",
+      this.getInfo = function getInfo() {
+        return this.firstName + " " + this.lastName;
+      };
+    }
+    var per1 = new Personne("Total");
+    per1.firstName = "Toto1";
+    per1.lastName = "Doe1";
+
+    var per2 = new Personne("Total2");
+    per2.firstName = "Toto2";
+    per2.lastName = "Doe2";
+    console.log(per1.getInfo() + per2.getInfo())
+
+    var per3 = new Personne("Total3");
+    per3.firstName = "Toto3";
+    per3.lastName = "Doe3";
+    per3.age = 35;
+    per3.infoPlus = function getInfo(){
+        return this.getInfo() + '\n'+this.age +',';
+    }
+    console.log(per3.infoPlus());
+    
+    /******* Object **************************/
+    var bob = {name: "Bob", age: 22};
+    var jim = {name: "Jim", age: 23};
+    var tom = {name: "Tom", friends : [bob,jim]};
+    console.log("l'age de "+  tom.friends[1].name + "\nest\n" + tom.friends[1].age);
+
+
+    </script>
+</head>
+<br>
+
+    <h1>Demo JavaScript</h1>
+    <p id="idHelloName">
+        my first paragaraph
+    </p>
+    <div id="idName">
+        Nom: <b> Davaid</b> 
+    </div></br>
+
+    <p class="myClassHelloName">Hello David 02</p>
+    <div class="myClassHelloName">Hello David 03</div>
+
+    <a name="siteGoogle" href="www.google.com">Go to google!</a></br>
+    <a name="siteGoogle" href="www.google.com">Go to google!</a>
+    <div id="idTxt">Test appendChild: </div></br>
+    </hr>
+    La valeur de N: <input type="number" name="nValue" value="Calculer le factorielle de n"/>
+    <br>
+    <input id = "idV1" type="button">
+
+
+    <button onclick="myFunction()">click me!</button>
+    <script type="text/javascript">
+        var divNameObject = document.getElementById("idName");
+        var divNameContentTxt =divNameObject.innerText;
+        var divNameContentHTML = divNameObject.innerHTML;
+        console.log("div Name Content TEXT" + divNameContentTxt);// 带<>标签
+        console.log("div Name Content HTML" + divNameContentHTML);// 不带标签
+
+        var name = divNameContentTxt.split(":")[1];
+        console.log("name = " + name);
+        var pNameObject = document.getElementById("idHelloName");
+        pNameObject.innerHTML = pNameObject.innerHTML + 'Bonjour <span bgcolor="#2FFFD4">' + name +'</span>';
+
+        var listClassObject = document.getElementsByClassName("myClassHelloName");
+        for(var innercurrentTag of listClassObject){
+            innercurrentTag.innerHTML = innercurrentTag.innerHTML+"i = "+i+'Bonjour <span bgcolor="#00FFFF">' + name +'</span>';
+        }
+        ///////////////////////////////////////////////////////
+        var listNameObject = document.getElementsByName("siteGoogle");
+        listNameObject[0].href="https://www.google.fr";
+        listNameObject[0].innerHTML="Go to Google FR!!!";
+
+        var listBaliseObject = document.getElementsByTagName("a");
+        listBaliseObject[1].href="https://www.google.fr";
+        listBaliseObject[1].innerHTML="Click ici!";
+
+        //Selet Css
+        var span = document.querySelector("p.myClassHelloName" > span,nth -child(1));
+        
+        var wrapperP = document.createElement("p");
+        wrapperP.setAttribute("id","id_1");
+        wrapperP.innerHTML="Clique the children element";
+        
+
+        /******************************/
+        var calculFactorielle = function(){
+            var n = document.getElementById("idV").value;
+            var res = factorielle(n);
+            document.getElementById("resFactorielle").innerHTML = "Le factorielle de <b>" + n
+                + "</b> est <b>" +res + factorielle(5);
+        }
+    </script>
+
+    
+</body>
+</html>
