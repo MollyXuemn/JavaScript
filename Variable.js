@@ -23,11 +23,10 @@
     do 	import 	short 	while
     double 	in 	static 	with
 
-    2.1 在文本字符串中使用反斜杠对代码行进行换行。下面的例子会正确地显示：
-
+    2.1 在文本字符串中使用\ or \n对代码行进行换行。下面的例子会正确地显示：
     document.write("你好 \
     世界!");
-
+    
  */
 
     
