@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image_with_Time</title>
+    <!-- 根据不同时间，页面显示不同的图片，同时显示不同的问候语 
+            上午：上午好-> 显示 上午的图片
+            下午：下午好-> 显示 下午的图片 ...-->
+</head>
+<body>
+
+    <!-- 根据系统不同时间来判断，所以需要用到日期的内置对象
+    利用多分支语句来设置不同的图片
+    需要一个图片，并且根据时间修改图片，就需要用到操作元素src属性
+    需要一个div元素，显示不同的问候语，修改元素内容即可
+ -->    
+    <img src="img/200w.gif" alt="matin">
+    <div>Bonne matinee!</div>
+  <script>
+     // 1. 获取元素
+     var img = document.querySelector("img");
+     var div = document.querySelector("div");
+     // 2. 得到当前的小时数
+     var date = new Date();
+     var h = date.getHours();
+     // 3. 判断小时数改变图片和文字信息
+     if( h < 12 ){
+         img.src = 'img/200w.gif';
+         div.innerHTML = 'Bonjour cheri!!!';
+        } else if(h < 18){
+         img.src = 'img/giphy.gif';
+         div.innerHTML = 'Bonne aprem cherie;)'
+        } else{
+         img.src = "img/giphy.gif";
+         div.innerHTML = 'Bonsoir papa mam :*';
+        }
+
+     </script>
+
+    
+</body>
+</html>

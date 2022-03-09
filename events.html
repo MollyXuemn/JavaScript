@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+
+    <style>
+
+
+    </style>
+</head>
+<body onload="mgs()"> 
+    <div class="div" onmouseout="onOut(this)" onmouseover="onOver(this)">
+
+    </div>
+    <script>
+        function onOver(ooj){
+            ooj.innerHTML = "Hello";
+        }
+
+        function onOut(ooj){
+            ooj.innerHTML="World";
+        }
+    </script>
+    <form>
+        <input type="text" onchange="changeDemo(this)">
+        <!-- <input type="text" onchange="alert("hello, contents change")"> -->
+        <input type="text" onselect="changeDemo(this)" onfocus="changeDemo2(this)">
+    </form>
+    <script>
+        function changeDemo(bg){
+            //alert("Hello, Contents change!"); 
+            bg.style.background = "red";
+        }
+        function changeDemo2(bg){
+            bg.style.background = "blue";
+        }
+        function mgs(){
+            alert("网页内容加载完毕")
+        }
+    </script>
+    
+</body>
+</html>

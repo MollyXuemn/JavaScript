@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Object</title>
+</head>
+<body>
+    <a href="Date.html">Switch to</a>
+    <button id = "btn" onclick="goceshi()">按钮</button>
+    <form>
+        <input type="text" id="username">
+    </form>
+    <button id="btn2" onclick="safe()">按钮2</button>
+    <script>
+        /* exe1：
+        function goceshi(){
+            //history.back();
+            history.forward();
+        } */
+        
+        function safe(){
+            var name = document.getElementById("username").value;
+            if(name=="hello"){
+                //history.go()进入历史中的某个页面
+                history.go(-1);//将页面返回到上一页
+            }else{
+                alert("error");
+            }
+        }
+    </script>
+</body>
+</html>

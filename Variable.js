@@ -27,6 +27,9 @@
     document.write("你好 \
     世界!");
     
+
+    2.2  const name = {}; //const是不可转变的，会出错
+         name.title = "..."; 
  */
 
     

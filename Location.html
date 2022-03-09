@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+</head>
+<body>
+    <button id = "btn" onclick="getLoc()">按钮</button>
+    <p id="ptime"></p>
+    <script>
+        /* window.location对象用于获得
+        当前页面的地址(URL),并把浏览器重定向到新的页面 */
+        function getLoc(){
+            /* locaiton.hostname 返回web主机的域名
+               location.pathname 返回当前页面的路径和文件名
+               location.port 返回Web主机的端口
+               location.protocol返回所使用的web协议
+               location.href 属性返回当前页面的URL
+               location.assign 方法加载新的文档 */
+              // document.getElementById("ptime").innerHTML = window.location.assign(www.baidu.com);
+                window.location.assign("http://www.baidu.com");
+
+        /* window.screen 对象包含有关用户屏幕的信息
+        screen.availHeight 可用的屏幕宽度
+        screen.availWidth 可用的屏幕高度
+        screen.height 屏幕高度
+        screen.width 屏幕宽度 */
+         document.write("屏幕可用宽度:"+screen.availHeight +"屏幕可用宽度:"+screen.availWidth);
+        }   
+    </script>
+</body>
+</html>

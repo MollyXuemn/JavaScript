@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom_EventListener</title>
+</head>
+<body>
+    <div id="div">Hello</div>
+    <button id = "btn" onclick="demo()">按钮</button>
+    <button id = "btn2" onclick="demo()">按钮</button>
+   <script>
+    var btn1 = document.getElementById("btn1");   
+    /* btn1.function (){
+        alert("Hello 1");
+    }//被覆盖掉
+    btn1.function (){
+        alert("Hello 2");
+    } */
+    btn1.addEventListener("click",demo1);
+    btn1.addEventListener("click",demo2);//不会被覆盖
+    btn1.addEventListener("click",demo3);//不会被覆盖
+    function demo1(){
+        alert("Hello 1");
+    }
+    function demo2(){
+        alert("Hello 2");
+    }
+    btn1.removeEventListener("click",demo2);//移除事件
+   </script>
+
+   <script>
+       /* 事件对象event：
+         1. type: 获取事件类型
+         2. target: 获取事件目标
+         3. stopPropagation(): 阻止事件冒泡
+         4. preventDefault(): 阻止事件默认行为
+
+       */
+
+       document.getElementById("btn2").addEventListener("click",showType);
+       function showType(event){
+           alert(event.target);
+       }
+
+   </script>
+</body>
+</html>

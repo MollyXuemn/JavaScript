@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindowBOM</title>
+</head>
+<body>
+    <button id="btn" onclick="btnClicked()">button</button>
+    <script>
+        document.write("宽度"+window.innerWidth+",高度"+window.innerHeight);
+        document.getElementById();
+        
+
+        var num = [1, 2, 3, 4, 5, 6];
+        var i = 0;
+        var j = 0;
+        var k = num.length()-1;
+        var mid = 0;
+        function btnClicked(){
+            //window.open("DOMObjet.html","windowname","height=200, width=200,top=100,left=100,toolbar=no,menubar=no");
+            window.close(); //关闭窗口
+        }
+        
+        function btnClicked2(){
+            while(j < k){
+                //冒泡排序
+                if(num[j] > mid){
+                    swap(num[j],num[k]);
+                    --k;
+                }else if(num[i] < mid){
+                    swap(num[j],num[j]);
+                    ++i;
+                    ++j;
+                }else{
+                    ++j;
+                }
+            }    
+        }
+    </script>
+
+</body>
+</html>

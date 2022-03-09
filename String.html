@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <!-- 
+     1. 什么是对象：
+        JavaScript中的所有事物都是对象：字符串、数值、数组、函数...
+        每个对象带有属性和方法;
+        JS允许自定义对象
+     2. 自定义对象：
+        1):定义并创建对象实例
+        2):使用函数来定义对象，然后创建新的对象实例
+     -->
+    <!-- ex 创建对象 -->
+    <script>
+        people = new Object();
+        people.name = "iwen";
+        people.age = "30";
+        document.write("name:" + people.name + ",age" + people.age);
+        people = {name:"iwen", age:"30"};
+        document.write("name:" + people.name + ",age:" + people.age);
+        function people(){
+            this._name = name;
+            this._age = age;
+        }
+        son = new people("iwen", 20);
+        document.write("name" + son._name + "age"+ son._age);
+    </script>
+    <script>
+        /*1. String 对象: 可以使用单引号或者单引号
+          2.  在字符串中查找字符串：indexOf()
+          3. str.match("world")  
+          4. str.replace("World", replaceword)
+          5. 字符串大小写转换：str.toUpperCase()
+          6. 将字符串转换成数组：str.split(" ");
+
+          1. 字符串属性和方法：
+            1）属性：length、prototype、constructor
+            2) 方法： charAt()、charCodeAt()、concat()、fromCharCode()
+            indexOf()、lastIndexOf()、match()、replace()、search()、slice()
+            substring()、substr()、valueOf()、split()
+          */
+        
+    </script>
+</body>
+</html>
